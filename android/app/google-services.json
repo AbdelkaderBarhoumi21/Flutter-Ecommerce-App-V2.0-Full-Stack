@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "179769436216",
+    "project_id": "facebook-app-a83c7",
+    "storage_bucket": "facebook-app-a83c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:179769436216:android:386efb126de650ccc55ecd",
+        "android_client_info": {
+          "package_name": "com.example.ecommerce_application_fullsatck_v2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "179769436216-8st4va8uh3ljmig9hgo0p449oath2qun.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ecommerce_application_fullsatck_v2",
+            "certificate_hash": "043a23f520f87dae859c216851ef1b926d94141a"
+          }
+        },
+        {
+          "client_id": "179769436216-76au848eor37csqeaf07v0std8uqr2o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsbnY1GGn4WgfOEc3G4fiuiaDnQSKQwI0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "179769436216-76au848eor37csqeaf07v0std8uqr2o9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "179769436216-1nbsh1leohciehocusvutinqh7971sso.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterEcommerceAppV2"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
