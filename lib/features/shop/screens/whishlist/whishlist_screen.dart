@@ -1,3 +1,4 @@
+import 'package:ecommerce_application_fullsatck_v2/features/shop/models/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_application_fullsatck_v2/common/widget/appbar/appbar.dart';
 import 'package:ecommerce_application_fullsatck_v2/common/widget/icons/circular_icon.dart';
@@ -33,7 +34,7 @@ class WhishlistScreen extends StatelessWidget {
           child: AppGridLayout(
             itemCount: 10,
             itemBuilder: (context, index) {
-              return AppProductCardVertical();
+              return AppProductCardVertical(productModel: ProductModel.empty());
             },
           ),
         ),

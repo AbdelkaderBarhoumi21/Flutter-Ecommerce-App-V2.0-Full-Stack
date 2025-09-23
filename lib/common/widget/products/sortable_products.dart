@@ -1,3 +1,4 @@
+import 'package:ecommerce_application_fullsatck_v2/features/shop/models/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_application_fullsatck_v2/common/widget/layouts/grid_layout.dart';
 import 'package:ecommerce_application_fullsatck_v2/common/widget/products/products_card/product_vertical_card.dart';
@@ -5,9 +6,7 @@ import 'package:ecommerce_application_fullsatck_v2/utils/constants/sizes.dart';
 import 'package:iconsax/iconsax.dart';
 
 class AppSortableProducts extends StatelessWidget {
-  const AppSortableProducts({
-    super.key,
-  });
+  const AppSortableProducts({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,21 +15,19 @@ class AppSortableProducts extends StatelessWidget {
         //filter field
         DropdownButtonFormField(
           decoration: InputDecoration(prefixIcon: Icon(Iconsax.sort)),
-          items: ['Name', 'Lower Price', 'Higher price', 'Sale', 'Newest']
-              .map((filter) {
-                return DropdownMenuItem(
-                  value: filter,
-                  child: Text(filter),
-                );
-              })
-              .toList(),
+          items: ['Name', 'Lower Price', 'Higher price', 'Sale', 'Newest'].map((
+            filter,
+          ) {
+            return DropdownMenuItem(value: filter, child: Text(filter));
+          }).toList(),
           onChanged: (value) {},
         ),
         SizedBox(height: AppSizes.spaceBtwSections),
-        //products 
+        //products
         AppGridLayout(
           itemCount: 10,
-          itemBuilder: (context, index) => AppProductCardVertical(),
+          itemBuilder: (context, index) =>
+              AppProductCardVertical(productModel: ProductModel.empty()),
         ),
       ],
     );

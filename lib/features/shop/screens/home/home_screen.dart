@@ -1,3 +1,5 @@
+import 'package:ecommerce_application_fullsatck_v2/features/shop/controllers/product/product_controller.dart';
+import 'package:ecommerce_application_fullsatck_v2/features/shop/models/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_application_fullsatck_v2/common/widget/layouts/grid_layout.dart';
 import 'package:ecommerce_application_fullsatck_v2/common/widget/products/products_card/product_vertical_card.dart';
@@ -9,7 +11,6 @@ import 'package:ecommerce_application_fullsatck_v2/common/widget/textfields/sear
 import 'package:ecommerce_application_fullsatck_v2/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:ecommerce_application_fullsatck_v2/common/widget/custom_shapes/primary_header_container.dart';
 import 'package:ecommerce_application_fullsatck_v2/features/shop/screens/home/widgets/promo_slider.dart';
-import 'package:ecommerce_application_fullsatck_v2/utils/constants/image.dart';
 import 'package:ecommerce_application_fullsatck_v2/utils/constants/sizes.dart';
 import 'package:ecommerce_application_fullsatck_v2/utils/constants/texts.dart';
 import 'package:get/get.dart';
@@ -20,6 +21,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(HomeController());
+    final productController = Get.put(ProductController());
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -64,12 +66,22 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: AppSizes.spaceBtwItems),
 
                   //Grid of product card
-                  AppGridLayout(
-                    itemCount: 6,
-                    itemBuilder: (context, index) {
-                      return AppProductCardVertical();
-                    },
-                  ),
+                  Obx(() {
+                    if (productController.isLoading.value) {
+                      return const Center(child: CircularProgressIndicator());
+                    }
+                    if (productController.featuredProducts.isEmpty) {
+                      return Center(child: Text("Products Not Found!"));
+                    }
+                    return AppGridLayout(
+                      itemCount: productController.featuredProducts.length,
+                      itemBuilder: (context, index) {
+                        ProductModel product =
+                            productController.featuredProducts[index];
+                        return AppProductCardVertical(productModel: product);
+                      },
+                    );
+                  }),
                 ],
               ),
             ),

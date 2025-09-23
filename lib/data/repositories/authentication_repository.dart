@@ -1,7 +1,5 @@
 import 'package:ecommerce_application_fullsatck_v2/data/dummy_data.dart';
-import 'package:ecommerce_application_fullsatck_v2/data/repositories/banner/banner_repository.dart';
-import 'package:ecommerce_application_fullsatck_v2/data/repositories/brand/brand_repository.dart';
-import 'package:ecommerce_application_fullsatck_v2/data/repositories/category/category_repository.dart';
+import 'package:ecommerce_application_fullsatck_v2/data/repositories/product/product_repository.dart';
 import 'package:ecommerce_application_fullsatck_v2/data/repositories/user/user_repositroy.dart';
 import 'package:ecommerce_application_fullsatck_v2/features/authentication/screens/signup/verify_email_screen.dart';
 import 'package:ecommerce_application_fullsatck_v2/features/personalization/controllers/user_controller.dart';
@@ -39,6 +37,8 @@ class AuthenticationRepository extends GetxController {
     // Get.put(BannerRepository()).uploadBanners(AppDummyModel.banner);
     // //!add brand reposirtoy to delete later and add to admin app to upload brand to firebase and cloudinary
     // Get.put(BrandRepository()).uploadBrands(AppDummyModel.brands);
+    // //!add product reposirtoy to delete later and add to admin app to upload product to firebase and cloudinary
+    // Get.put(ProductRepository()).uploadProducts(AppDummyModel.products);
 
     super.onReady();
   }

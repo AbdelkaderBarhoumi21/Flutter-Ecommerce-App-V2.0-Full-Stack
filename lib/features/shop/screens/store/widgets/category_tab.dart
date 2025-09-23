@@ -1,3 +1,4 @@
+import 'package:ecommerce_application_fullsatck_v2/features/shop/models/product_model.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ecommerce_application_fullsatck_v2/common/widget/brand/brand_showcase.dart';
@@ -52,7 +53,7 @@ class AppCategoryTab extends StatelessWidget {
               AppGridLayout(
                 itemCount: 4,
                 itemBuilder: (context, index) {
-                  return AppProductCardVertical();
+                  return AppProductCardVertical(productModel: ProductModel.empty(),);
                 },
               ),
               SizedBox(height: AppSizes.spaceBtwSections),
