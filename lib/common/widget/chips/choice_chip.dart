@@ -13,9 +13,10 @@ class AppChoiceChip extends StatelessWidget {
 
   final String text;
   final bool selected;
-  final Function(bool?) onSelected;
+  final Function(bool)? onSelected;
   @override
   Widget build(BuildContext context) {
+    final dark = AppHelperFunctions.isDarkMode(context);
     bool isColor = AppHelperFunctions.getColor(text) != null;
     return ChoiceChip(
       label: isColor ? SizedBox() : Text(text),
@@ -25,7 +26,7 @@ class AppChoiceChip extends StatelessWidget {
       shape: isColor ? CircleBorder() : null,
       labelPadding: isColor ? EdgeInsets.zero : null,
       padding: isColor ? EdgeInsets.zero : null,
-      backgroundColor: isColor ? AppHelperFunctions.getColor(text) : null,
+      backgroundColor: dark ? AppColors.dark : AppColors.light,
       avatar: isColor
           ? AppCircularContainer(
               width: 50,

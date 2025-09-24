@@ -36,6 +36,22 @@ class ProductController extends GetxController {
     }
   }
 
+  //function to get ony all feature products
+
+  Future<List<ProductModel>> getAllFeautredProduct() async {
+    try {
+      //fetch feature products
+      List<ProductModel> featuredProducts = await _repository
+          .fetchAllFeatureProducts();
+      //assign feature products
+      return featuredProducts;
+    } catch (e) {
+      AppSnackBarHelpers.errorSnackBar(title: 'Failed!', message: e.toString());
+      return [];
+      print(e);
+    }
+  }
+
   //calculate sale percentage
   String? calculateSalePercantage(double originalPrice, double? salePrice) {
     if (salePrice == null || salePrice <= 0.0) return null;
@@ -45,7 +61,8 @@ class ProductController extends GetxController {
       0,
     ); //to dont get perctnage like 3.3333 we only get 3
   }
-  //get product price or price range for a varibale 
+
+  //get product price or price range for a varibale
   String getProductPrice(ProductModel product) {
     double samllestprice = double.infinity; //démarre à infinity et descend.
     double largestPrice = 0.0; //largestPrice démarre à 0 et monte.
@@ -76,5 +93,9 @@ class ProductController extends GetxController {
         return '${largestPrice.toStringAsFixed(0)}-${AppTexts.currency}${samllestprice.toStringAsFixed(0)}';
       }
     }
+  }
+
+  String getProductStockStatus(int stock) {
+    return stock > 0 ? 'In Stock' : 'Out Of Stock';
   }
 }

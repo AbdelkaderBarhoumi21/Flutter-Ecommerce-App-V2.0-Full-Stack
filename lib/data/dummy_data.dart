@@ -312,193 +312,166 @@ class AppDummyModel {
   static final List<ProductModel> products = [
     // 001
     ProductModel(
-      id: '1',
-      title: 'Casual Denim & Tee Set With Glossy Slip-On Shoes',
-      stock: 15,
-      price: 115,
-      thumbnail: AppImages.productImage1,
-      description:
-          "Stay stylish and comfortable with this casual outfit combo featuring a soft olive-green T-shirt, classic denim shorts, and sleek black slip-on shoes. Perfect for laid-back days or casual outings. Easy to wear, easy to love — all-in-one style made simple.",
-      brand: brands[1],
-      salePrice: 100,
-      sku: 'ABR4568',
-      categoryId: '7',
-      productType: 'ProductType.single',
-    ),
+        id: '1',
+        title: 'Casual Denim & Tee Set With Glossy Slip-On Shoes',
+        stock: 15,
+        price: 115,
+        thumbnail: AppImages.productImage1,
+        description:
+            "Stay stylish and comfortable with this casual outfit combo featuring a soft olive-green T-shirt, classic denim shorts, and sleek black slip-on shoes. Perfect for laid-back days or casual outings. Easy to wear, easy to love — all-in-one style made simple.",
+        brand: brands[1],
+        salePrice: 100,
+        sku: 'ABR4568',
+        categoryId: '7',
+        productType: 'ProductType.single'),
 
     // 002
     ProductModel(
-      id: '2',
-      title: 'ProGrip Indoor/Outdoor Basketball',
-      stock: 15,
-      price: 30,
-      isFeatured: true,
-      thumbnail: AppImages.productImage2,
-      description:
-          'Elevate your game with the ProGrip™ Basketball — designed for both indoor courts and outdoor play. Its textured grip ensures maximum control, while the durable rubber build offers long-lasting performance. Perfect for casual shoots or intense matches!',
-      brand: brands[0],
-      salePrice: 24,
-      sku: 'ABR4568',
-      categoryId: '23',
-      productType: 'ProductType.single',
-    ),
+        id: '2',
+        title: 'ProGrip Indoor/Outdoor Basketball',
+        stock: 15,
+        price: 30,
+        isFeatured: true,
+        thumbnail: AppImages.productImage2,
+        description:
+            'Elevate your game with the ProGrip™ Basketball — designed for both indoor courts and outdoor play. Its textured grip ensures maximum control, while the durable rubber build offers long-lasting performance. Perfect for casual shoots or intense matches!',
+        brand: brands[0],
+        salePrice: 24,
+        sku: 'ABR4568',
+        categoryId: '23',
+        productType: 'ProductType.single'),
 
     // 003
     ProductModel(
-      id: '3',
-      title: 'Apple iPhone 14 (Blue) – Super Retina Display, A15 Bionic',
-      stock: 15,
-      price: 700,
-      isFeatured: false,
-      thumbnail: AppImages.productImage3,
-      description:
-          'Experience the power of the A15 Bionic chip, advanced dual-camera system, and stunning Super Retina XDR display. The iPhone 14 in elegant blue delivers lightning-fast performance, all-day battery life, and next-level photography — all in a sleek, durable design.',
-      brand: brands[2],
-      salePrice: 679,
-      sku: 'ABR4568',
-      categoryId: '19',
-      productAttributes: [
-        ProductAttributeModel(
-          name: 'Storage',
-          values: ['128GB', '256GB', '512GB'],
-        ),
-      ],
-      productVariations: [
-        ProductVariationModel(
-          id: '1',
-          attributeValues: {'Storage': '128GB'},
-          price: 600,
-          description: 'This is description of 128GB Storage',
-          sku: 'iPhoneSKU',
-          stock: 10,
-        ),
-        ProductVariationModel(
-          id: '2',
-          attributeValues: {'Storage': '256GB'},
-          price: 650,
-          description: 'This is description of 256GB Storage',
-          sku: 'iPhoneSKU',
-          stock: 20,
-        ),
-        ProductVariationModel(
-          id: '3',
-          attributeValues: {'Storage': '512GB'},
-          price: 700,
-          description: 'This is description of 512GB Storage',
-          sku: 'iPhoneSKU',
-          stock: 10,
-        ),
-      ],
-      productType: 'ProductType.variable',
-    ),
+        id: '3',
+        title: 'Apple iPhone 14 (Blue) – Super Retina Display, A15 Bionic',
+        stock: 15,
+        price: 700,
+        isFeatured: false,
+        thumbnail: AppImages.productImage3,
+        description:
+            'Experience the power of the A15 Bionic chip, advanced dual-camera system, and stunning Super Retina XDR display. The iPhone 14 in elegant blue delivers lightning-fast performance, all-day battery life, and next-level photography — all in a sleek, durable design.',
+        brand: brands[2],
+        salePrice: 679,
+        sku: 'ABR4568',
+        categoryId: '19',
+        productAttributes: [
+          ProductAttributeModel(name: 'Storage', values: ['128GB', '256GB', '512GB']),
+        ],
+        productVariations: [
+          ProductVariationModel(
+              id: '1',
+              attributeValues: {'Storage': '128GB'},
+              price: 600,
+              description: 'This is description of 128GB Storage',
+              sku: 'iPhoneSKU',
+              stock: 10),
+          ProductVariationModel(
+              id: '2',
+              attributeValues: {'Storage': '256GB'},
+              price: 650,
+              description: 'This is description of 256GB Storage',
+              sku: 'iPhoneSKU',
+              stock: 20),
+          ProductVariationModel(
+              id: '3',
+              attributeValues: {'Storage': '512GB'},
+              price: 700,
+              description: 'This is description of 512GB Storage',
+              sku: 'iPhoneSKU',
+              stock: 10)
+        ],
+        productType: 'ProductType.variable'),
 
     // 004
     ProductModel(
-      id: '4',
-      title: 'Apple iPhone X (64GB/256GB) – Space Gray & Silver Variants',
-      stock: 15,
-      price: 350,
-      isFeatured: true,
-      thumbnail: AppImages.productImage4a,
-      description:
-          'The Apple iPhone X redefined smartphones with its edge-to-edge 5.8” Super Retina display, powerful A11 Bionic chip, and Face ID facial recognition technology. Its sleek glass body, dual 12MP cameras, and wireless charging make it a top choice for premium performance and timeless style.',
-      brand: brands[2],
-      images: [
-        AppImages.productImage4a,
-        AppImages.productImage4b,
-        AppImages.productImage4c,
-        AppImages.productImage4d,
-        AppImages.productImage4e,
-      ],
-      sku: 'ABR4568',
-      categoryId: '19',
-      productAttributes: [
-        ProductAttributeModel(
-          name: 'Storage',
-          values: ['64GB', '128GB', '256GB'],
-        ),
-        ProductAttributeModel(name: 'Color', values: ['Black', 'Silver']),
-      ],
-      productVariations: [
-        ProductVariationModel(
-          id: '1',
-          stock: 5,
-          price: 250,
-          image: AppImages.productImage4b,
-          description: 'This is product description for 64GB Black',
-          attributeValues: {'Storage': '64GB', 'Color': 'Black'},
-        ),
-        ProductVariationModel(
-          id: '2',
-          stock: 15,
-          price: 290,
-          image: AppImages.productImage4c,
-          attributeValues: {'Color': 'Black', 'Storage': '128GB'},
-        ),
-        ProductVariationModel(
-          id: '3',
-          stock: 0,
-          price: 350,
-          image: AppImages.productImage4a,
-          attributeValues: {'Color': 'Black', 'Storage': '256GB'},
-        ),
-        ProductVariationModel(
-          id: '4',
-          stock: 222,
-          price: 250,
-          image: AppImages.productImage4d,
-          attributeValues: {'Color': 'Silver', 'Storage': '64GB'},
-        ),
-        ProductVariationModel(
-          id: '5',
-          stock: 0,
-          price: 290,
-          image: AppImages.productImage4e,
-          attributeValues: {'Color': 'Silver', 'Storage': '128GB'},
-        ),
-        ProductVariationModel(
-          id: '6',
-          stock: 11,
-          price: 350,
-          image: AppImages.productImage4e,
-          attributeValues: {'Color': 'Silver', 'Storage': '256GB'},
-        ),
-      ],
-      productType: 'ProductType.variable',
-    ),
+        id: '4',
+        title: 'Apple iPhone X (64GB/256GB) – Space Gray & Silver Variants',
+        stock: 15,
+        price: 350,
+        isFeatured: true,
+        thumbnail: AppImages.productImage4a,
+        description:
+            'The Apple iPhone X redefined smartphones with its edge-to-edge 5.8” Super Retina display, powerful A11 Bionic chip, and Face ID facial recognition technology. Its sleek glass body, dual 12MP cameras, and wireless charging make it a top choice for premium performance and timeless style.',
+        brand: brands[2],
+        images: [AppImages.productImage4b, AppImages.productImage4c, AppImages.productImage4d, AppImages.productImage4e],
+        sku: 'ABR4568',
+        categoryId: '19',
+        productAttributes: [
+          ProductAttributeModel(name: 'Storage', values: ['64GB', '128GB', '256GB']),
+          ProductAttributeModel(name: 'Color', values: ['Black', 'Silver'])
+        ],
+        productVariations: [
+          ProductVariationModel(
+              id: '1',
+              stock: 5,
+              price: 250,
+              image: AppImages.productImage4b,
+              description: 'This is product description for 64GB Black',
+              attributeValues: {'Storage': '64GB', 'Color': 'Black'}),
+          ProductVariationModel(
+              id: '2',
+              stock: 15,
+              price: 290,
+              image: AppImages.productImage4c,
+              attributeValues: {'Color': 'Black', 'Storage': '128GB'}),
+          ProductVariationModel(
+              id: '3',
+              stock: 0,
+              price: 350,
+              image: AppImages.productImage4a,
+              attributeValues: {'Color': 'Black', 'Storage': '256GB'}),
+          ProductVariationModel(
+              id: '4',
+              stock: 222,
+              price: 250,
+              image: AppImages.productImage4d,
+              attributeValues: {'Color': 'Silver', 'Storage': '64GB'}),
+          ProductVariationModel(
+              id: '5',
+              stock: 0,
+              price: 290,
+              image: AppImages.productImage4e,
+              attributeValues: {'Color': 'Silver', 'Storage': '128GB'}),
+          ProductVariationModel(
+              id: '6',
+              stock: 11,
+              price: 350,
+              image: AppImages.productImage4e,
+              attributeValues: {'Color': 'Silver', 'Storage': '256GB'}),
+        ],
+        productType: 'ProductType.variable'),
 
     // 005
     ProductModel(
-      id: '5',
-      title: 'Floral Affair Perfume – 100ml Romantic, Elegant & Timeless',
-      stock: 15,
-      price: 60,
-      isFeatured: false,
-      thumbnail: AppImages.productImage5,
-      description:
-          'Floral Affair captures the essence of blooming cherry blossoms with a soft, feminine fragrance that lingers beautifully. Ideal for daily wear or special evenings, it’s a delicate blend of floral notes that leaves a lasting impression.',
-      brand: brands[9],
-      salePrice: 58.99,
-      sku: 'ABR4568',
-      categoryId: '15',
-      productType: 'ProductType.single',
-    ),
+        id: '5',
+        title: 'Floral Affair Perfume – 100ml Romantic, Elegant & Timeless',
+        stock: 15,
+        price: 60,
+        isFeatured: false,
+        thumbnail: AppImages.productImage5,
+        description:
+            'Floral Affair captures the essence of blooming cherry blossoms with a soft, feminine fragrance that lingers beautifully. Ideal for daily wear or special evenings, it’s a delicate blend of floral notes that leaves a lasting impression.',
+        brand: brands[9],
+        salePrice: 58.99,
+        sku: 'ABR4568',
+        categoryId: '15',
+        productType: 'ProductType.single'),
 
     // 006
     ProductModel(
-      id: '6',
-      title: 'J. Pour Femme Long Lasting Perfume 100ml',
-      stock: 0,
-      price: 50,
-      thumbnail: AppImages.productImage6,
-      description:
-          'J. Pour Femme is a sophisticated fragrance designed for the modern woman. With a graceful blend of floral and musky notes, it delivers a soft yet long-lasting scent perfect for everyday elegance or special occasions.',
-      brand: brands[9],
-      salePrice: 48.99,
-      sku: 'ABR4568',
-      categoryId: '15',
-      productType: 'ProductType.single',
-    ),
+        id: '6',
+        title: 'J. Pour Femme Long Lasting Perfume 100ml',
+        stock: 0,
+        price: 50,
+        thumbnail: AppImages.productImage6,
+        description:
+            'J. Pour Femme is a sophisticated fragrance designed for the modern woman. With a graceful blend of floral and musky notes, it delivers a soft yet long-lasting scent perfect for everyday elegance or special occasions.',
+        brand: brands[9],
+        salePrice: 48.99,
+        sku: 'ABR4568',
+        categoryId: '15',
+        productType: 'ProductType.single'),
 
     // 007
     ProductModel(
@@ -552,47 +525,43 @@ class AppDummyModel {
 
     // 010
     ProductModel(
-      id: '10',
-      title: 'Urban Edge High-Top Sneakers – Blue Edition',
-      brand: brands[3],
-      thumbnail: AppImages.productImage10,
-      description:
-          "Step up your street style with these trendy blue high-top sneakers. Designed with breathable mesh panels, cushioned ankle support, and durable laces, they offer a perfect mix of comfort and edge — ideal for casual outings or everyday wear.",
-      price: 59.99,
-      stock: 10,
-      categoryId: '11',
-      sku: 'BATA-SHOES',
-      productAttributes: [
-        ProductAttributeModel(name: 'Size', values: ['40', '41', '42']),
-      ],
-      productType: 'ProductType.variable',
-      productVariations: [
-        ProductVariationModel(
-          id: '1',
-          description: 'This is description of Blue 40 Size Shoes',
-          price: 59.99,
-          stock: 10,
-          image: AppImages.productImage10,
-          attributeValues: {'Size': '40'},
-        ),
-        ProductVariationModel(
-          id: '2',
-          description: 'This is description of Blue 41 Size Shoes',
-          price: 59.99,
-          stock: 10,
-          image: AppImages.productImage10,
-          attributeValues: {'Size': '41'},
-        ),
-        ProductVariationModel(
-          id: '3',
-          description: 'This is description of Blue 42 Size Shoes',
-          price: 59.99,
-          stock: 10,
-          image: AppImages.productImage10,
-          attributeValues: {'Size': '42'},
-        ),
-      ],
-    ),
+        id: '10',
+        title: 'Urban Edge High-Top Sneakers – Blue Edition',
+        brand: brands[3],
+        thumbnail: AppImages.productImage10,
+        description:
+            "Step up your street style with these trendy blue high-top sneakers. Designed with breathable mesh panels, cushioned ankle support, and durable laces, they offer a perfect mix of comfort and edge — ideal for casual outings or everyday wear.",
+        price: 59.99,
+        stock: 10,
+        categoryId: '11',
+        sku: 'BATA-SHOES',
+        productAttributes: [
+          ProductAttributeModel(name: 'Size', values: ['40', '41', '42'])
+        ],
+        productType: 'ProductType.variable',
+        productVariations: [
+          ProductVariationModel(
+              id: '1',
+              description: 'This is description of Blue 40 Size Shoes',
+              price: 59.99,
+              stock: 10,
+              image: AppImages.productImage10,
+              attributeValues: {'Size': '40'}),
+          ProductVariationModel(
+              id: '2',
+              description: 'This is description of Blue 41 Size Shoes',
+              price: 59.99,
+              stock: 10,
+              image: AppImages.productImage10,
+              attributeValues: {'Size': '41'}),
+          ProductVariationModel(
+              id: '3',
+              description: 'This is description of Blue 42 Size Shoes',
+              price: 59.99,
+              stock: 10,
+              image: AppImages.productImage10,
+              attributeValues: {'Size': '42'}),
+        ]),
 
     // 011
     ProductModel(
@@ -612,67 +581,61 @@ class AppDummyModel {
 
     // 012
     ProductModel(
-      id: '12',
-      title:
-          'Bata Formal Socks – Black with Grey Stripes,  Classic, Breathable & Office-Ready',
-      stock: 10,
-      price: 4.99,
-      thumbnail: AppImages.productImage12,
-      description:
-          "Designed for everyday elegance, these black formal socks from Bata feature subtle grey stripes and a comfortable stretch fit. Ideal for workwear or formal occasions, they provide a smooth finish, reinforced toe, and breathable fabric for all-day wear.",
-      sku: "BATA-SOCKS",
-      brand: brands[3],
-      categoryId: '9',
-      productType: 'ProductType.single',
-    ),
+        id: '12',
+        title: 'Bata Formal Socks – Black with Grey Stripes,  Classic, Breathable & Office-Ready',
+        stock: 10,
+        price: 4.99,
+        thumbnail: AppImages.productImage12,
+        description:
+            "Designed for everyday elegance, these black formal socks from Bata feature subtle grey stripes and a comfortable stretch fit. Ideal for workwear or formal occasions, they provide a smooth finish, reinforced toe, and breathable fabric for all-day wear.",
+        sku: "BATA-SOCKS",
+        brand: brands[3],
+        categoryId: '9',
+        productType: 'ProductType.single'),
 
     // 013
     ProductModel(
-      id: '13',
-      title: 'Chic Mini Handbag – Electric Blue',
-      price: 39.99,
-      stock: 23,
-      thumbnail: AppImages.productImage13,
-      description:
-          "Turn heads with this vibrant electric blue mini handbag, designed for fashion-forward women on the go. Featuring a sleek structure, sturdy handles, and a polished zipper finish, it’s perfect for essentials like your phone, wallet, and keys — ideal for both day and",
-      sku: 'J.-BAGS',
-      brand: brands[9],
-      categoryId: '14',
-      productType: 'ProductType.single',
-    ),
+        id: '13',
+        title: 'Chic Mini Handbag – Electric Blue',
+        price: 39.99,
+        stock: 23,
+        thumbnail: AppImages.productImage13,
+        description:
+            "Turn heads with this vibrant electric blue mini handbag, designed for fashion-forward women on the go. Featuring a sleek structure, sturdy handles, and a polished zipper finish, it’s perfect for essentials like your phone, wallet, and keys — ideal for both day and",
+        sku: 'J.-BAGS',
+        brand: brands[9],
+        categoryId: '14',
+        productType: 'ProductType.single'),
 
     // 014
     ProductModel(
-      id: '14',
-      title: 'Men’s Classic Black Loafers – Tassel Design',
-      price: 99.99,
-      stock: 3,
-      salePrice: 87.99,
-      thumbnail: AppImages.productImage14,
-      description:
-          "Step into sophistication with these sleek black loafers featuring a polished finish and stylish tassel detail. Designed for formal events, office wear, or smart-casual outings, these shoes offer both comfort and class with every step.",
-      sku: 'NDURE-FORMAL',
-      brand: brands[10],
-      categoryId: '10',
-      productType: 'ProductType.single',
-    ),
+        id: '14',
+        title: 'Men’s Classic Black Loafers – Tassel Design',
+        price: 99.99,
+        stock: 3,
+        salePrice: 87.99,
+        thumbnail: AppImages.productImage14,
+        description:
+            "Step into sophistication with these sleek black loafers featuring a polished finish and stylish tassel detail. Designed for formal events, office wear, or smart-casual outings, these shoes offer both comfort and class with every step.",
+        sku: 'NDURE-FORMAL',
+        brand: brands[10],
+        categoryId: '10',
+        productType: 'ProductType.single'),
 
     // 015
     ProductModel(
-      id: '15',
-      title:
-          'Men’s Athletic Running Shoes – Blue & Grey Lightweight. Breathable. Performance-Ready',
-      price: 54.99,
-      stock: 54,
-      salePrice: 47.99,
-      thumbnail: AppImages.productImage15,
-      description:
-          "Hit the ground running with these sporty blue and grey athletic shoes. Built for comfort and grip, they feature a breathable mesh upper, cushioned sole, and durable traction — ideal for workouts, jogs, or everyday active wear.",
-      sku: 'SPORTS-SHOES',
-      brand: brands[10],
-      categoryId: '11',
-      productType: 'ProductType.single',
-    ),
+        id: '15',
+        title: 'Men’s Athletic Running Shoes – Blue & Grey Lightweight. Breathable. Performance-Ready',
+        price: 54.99,
+        stock: 54,
+        salePrice: 47.99,
+        thumbnail: AppImages.productImage15,
+        description:
+            "Hit the ground running with these sporty blue and grey athletic shoes. Built for comfort and grip, they feature a breathable mesh upper, cushioned sole, and durable traction — ideal for workouts, jogs, or everyday active wear.",
+        sku: 'SPORTS-SHOES',
+        brand: brands[10],
+        categoryId: '11',
+        productType: 'ProductType.single'),
 
     // 016
     ProductModel(
@@ -709,19 +672,18 @@ class AppDummyModel {
 
     // 018
     ProductModel(
-      id: '18',
-      title: 'Breakout Men’s Relaxed Fit Shirt – Light Grey (Short Sleeve)',
-      price: 29.99,
-      salePrice: 23.99,
-      thumbnail: AppImages.productImage18,
-      stock: 12,
-      brand: brands[5],
-      categoryId: '7',
-      description:
-          "Keep it cool and casual with this light grey relaxed fit shirt from Breakout. Featuring short sleeves, a soft collar, and breathable fabric, it’s perfect for summer days, beach outings, or layering over a tee. A wardrobe staple with effortless style.",
-      sku: "SHORT-WHITE-BREAKOUT",
-      productType: 'ProductType.single',
-    ),
+        id: '18',
+        title: 'Breakout Men’s Relaxed Fit Shirt – Light Grey (Short Sleeve)',
+        price: 29.99,
+        salePrice: 23.99,
+        thumbnail: AppImages.productImage18,
+        stock: 12,
+        brand: brands[5],
+        categoryId: '7',
+        description:
+            "Keep it cool and casual with this light grey relaxed fit shirt from Breakout. Featuring short sleeves, a soft collar, and breathable fabric, it’s perfect for summer days, beach outings, or layering over a tee. A wardrobe staple with effortless style.",
+        sku: "SHORT-WHITE-BREAKOUT",
+        productType: 'ProductType.single'),
 
     // 019
     ProductModel(
@@ -758,77 +720,71 @@ class AppDummyModel {
 
     // 021
     ProductModel(
-      id: '21',
-      title:
-          'Casual Winter Outfit Set – Olive Sweater, Blue Jeans & Grey Sneakers',
-      thumbnail: AppImages.productImage21,
-      price: 89.99,
-      salePrice: 78.87,
-      categoryId: '7',
-      brand: brands[1],
-      stock: 23,
-      description:
-          "This cozy winter-ready combo features a chunky olive green knit sweater, classic blue denim jeans, and a pair of trendy grey sneakers with tan laces. Whether you’re heading out for a casual day or a weekend hangout, this outfit offers both comfort and effortless style.",
-      sku: 'ADIDAS-COMBO',
-      productType: 'ProductType.single',
-    ),
+        id: '21',
+        title: 'Casual Winter Outfit Set – Olive Sweater, Blue Jeans & Grey Sneakers',
+        thumbnail: AppImages.productImage21,
+        price: 89.99,
+        salePrice: 78.87,
+        categoryId: '7',
+        brand: brands[1],
+        stock: 23,
+        description:
+            "This cozy winter-ready combo features a chunky olive green knit sweater, classic blue denim jeans, and a pair of trendy grey sneakers with tan laces. Whether you’re heading out for a casual day or a weekend hangout, this outfit offers both comfort and effortless style.",
+        sku: 'ADIDAS-COMBO',
+        productType: 'ProductType.single'),
 
     // 022
     ProductModel(
-      id: '22',
-      title: 'Ultra-Slim Silver Laptop – 13.3” Display, Backlit Keyboard',
-      price: 999.99,
-      salePrice: 969.99,
-      stock: 2,
-      thumbnail: AppImages.productImage22,
-      brand: brands[8],
-      categoryId: '18',
-      productType: 'ProductType.variable',
-      description:
-          'This ultra-slim silver laptop combines performance and elegance with a 13.3” full HD display, sleek aluminum body, and smooth backlit keyboard. Ideal for professionals, students, and creatives, it’s lightweight and perfect for productivity on the go.',
-      sku: "LAPTOP-HP",
-      productAttributes: [
-        ProductAttributeModel(name: 'Storage', values: ['512GB', '1TB']),
-      ],
-      productVariations: [
-        ProductVariationModel(
-          id: '1',
-          attributeValues: {'Storage': '512GB'},
-          stock: 23,
-          description: 'This is description of 512GB',
-          sku: 'SKU-HP',
-          price: 899.99,
-          salePrice: 869.99,
-          image: AppImages.productImage22,
-        ),
-        ProductVariationModel(
-          id: '2',
-          attributeValues: {'Storage': '1TB'},
-          stock: 23,
-          description: 'This is description of 1TB',
-          sku: 'SKU-HP',
-          price: 999.99,
-          salePrice: 969.99,
-          image: AppImages.productImage22,
-        ),
-      ],
-    ),
+        id: '22',
+        title: 'Ultra-Slim Silver Laptop – 13.3” Display, Backlit Keyboard',
+        price: 999.99,
+        salePrice: 969.99,
+        stock: 2,
+        thumbnail: AppImages.productImage22,
+        brand: brands[8],
+        categoryId: '18',
+        productType: 'ProductType.variable',
+        description:
+            'This ultra-slim silver laptop combines performance and elegance with a 13.3” full HD display, sleek aluminum body, and smooth backlit keyboard. Ideal for professionals, students, and creatives, it’s lightweight and perfect for productivity on the go.',
+        sku: "LAPTOP-HP",
+        productAttributes: [
+          ProductAttributeModel(name: 'Storage', values: ['512GB', '1TB'])
+        ],
+        productVariations: [
+          ProductVariationModel(
+              id: '1',
+              attributeValues: {'Storage': '512GB'},
+              stock: 23,
+              description: 'This is description of 512GB',
+              sku: 'SKU-HP',
+              price: 899.99,
+              salePrice: 869.99,
+              image: AppImages.productImage22),
+          ProductVariationModel(
+              id: '2',
+              attributeValues: {'Storage': '1TB'},
+              stock: 23,
+              description: 'This is description of 1TB',
+              sku: 'SKU-HP',
+              price: 999.99,
+              salePrice: 969.99,
+              image: AppImages.productImage22)
+        ]),
 
     // 023
     ProductModel(
-      id: '23',
-      title: 'Sleek Silver Laptop – 15.6” Full HD Display',
-      price: 1099,
-      salePrice: 999.99,
-      thumbnail: AppImages.productImage23,
-      description:
-          "Featuring a large 15.6” display with ultra-thin bezels, this sleek silver laptop is perfect for work, streaming, and multitasking. The spacious keyboard and lightweight body make it ideal for professionals, students, and remote workers alike.",
-      sku: "HP-LAPTOP",
-      stock: 2,
-      categoryId: '18',
-      brand: brands[8],
-      productType: 'ProductType.single',
-    ),
+        id: '23',
+        title: 'Sleek Silver Laptop – 15.6” Full HD Display',
+        price: 1099,
+        salePrice: 999.99,
+        thumbnail: AppImages.productImage23,
+        description:
+            "Featuring a large 15.6” display with ultra-thin bezels, this sleek silver laptop is perfect for work, streaming, and multitasking. The spacious keyboard and lightweight body make it ideal for professionals, students, and remote workers alike.",
+        sku: "HP-LAPTOP",
+        stock: 2,
+        categoryId: '18',
+        brand: brands[8],
+        productType: 'ProductType.single'),
 
     // 024
     ProductModel(
@@ -845,7 +801,7 @@ class AppDummyModel {
       categoryId: '14',
       productType: 'ProductType.single',
       productAttributes: [
-        ProductAttributeModel(name: 'Color', values: ['White', 'Red']),
+        ProductAttributeModel(name: 'Color', values: ['White', 'Red'])
       ],
     ),
 
@@ -883,34 +839,32 @@ class AppDummyModel {
 
     // 027
     ProductModel(
-      id: '27',
-      title: 'Dari Mooch Beard Growth Shampoo – Caffeinated Formula (100ml)',
-      price: 12.99,
-      thumbnail: AppImages.productImage27,
-      brand: brands[6],
-      description:
-          'Boost your beard game with Dari Mooch’s caffeinated Beard Growth Shampoo. Infused with natural ingredients and caffeine, this powerful formula stimulates hair follicles, strengthens roots, and promotes healthier, fuller beard growth — all while keeping your beard clean and refreshed.',
-      stock: 10,
-      categoryId: '27',
-      productType: 'ProductType.single',
-      sku: 'DARIMOOCH-OIL',
-    ),
+        id: '27',
+        title: 'Dari Mooch Beard Growth Shampoo – Caffeinated Formula (100ml)',
+        price: 12.99,
+        thumbnail: AppImages.productImage27,
+        brand: brands[6],
+        description:
+            'Boost your beard game with Dari Mooch’s caffeinated Beard Growth Shampoo. Infused with natural ingredients and caffeine, this powerful formula stimulates hair follicles, strengthens roots, and promotes healthier, fuller beard growth — all while keeping your beard clean and refreshed.',
+        stock: 10,
+        categoryId: '27',
+        productType: 'ProductType.single',
+        sku: 'DARIMOOCH-OIL'),
 
     // 028
     ProductModel(
-      id: '28',
-      title: 'Dari Mooch Charcoal Face Wash – Deep Cleansing (120ml)',
-      thumbnail: AppImages.productImage28,
-      stock: 3,
-      price: 8.99,
-      salePrice: 7.76,
-      description:
-          'Dari Mooch Charcoal Face Wash is designed to deeply cleanse your skin by removing dirt, excess oil, and impurities. Infused with activated charcoal, it helps control pimples and leaves your face feeling fresh and energized — perfect for daily men’s skincare.',
-      brand: brands[6],
-      categoryId: '12',
-      productType: 'ProductType.single',
-      sku: "DARIMOOCH-FACEWASH",
-    ),
+        id: '28',
+        title: 'Dari Mooch Charcoal Face Wash – Deep Cleansing (120ml)',
+        thumbnail: AppImages.productImage28,
+        stock: 3,
+        price: 8.99,
+        salePrice: 7.76,
+        description:
+            'Dari Mooch Charcoal Face Wash is designed to deeply cleanse your skin by removing dirt, excess oil, and impurities. Infused with activated charcoal, it helps control pimples and leaves your face feeling fresh and energized — perfect for daily men’s skincare.',
+        brand: brands[6],
+        categoryId: '12',
+        productType: 'ProductType.single',
+        sku: "DARIMOOCH-FACEWASH"),
 
     // 029
     ProductModel(
@@ -930,20 +884,17 @@ class AppDummyModel {
 
     // 030
     ProductModel(
-      id: '30',
-      title:
-          'Dari Mooch Beard Growth Kit – Oil, Shampoo & Biotin Spray (3-in-1 Set)',
-      thumbnail: AppImages.productImage30,
-      stock: 3,
-      price: 29.99,
-      salePrice: 27.99,
-      description:
-          'Unlock your beard’s full potential with the Dari Mooch Beard Growth Supplement Kit.',
-      brand: brands[6],
-      categoryId: '13',
-      productType: 'ProductType.single',
-      sku: "BEARDOIL-KIT-DARIMOOCH",
-    ),
+        id: '30',
+        title: 'Dari Mooch Beard Growth Kit – Oil, Shampoo & Biotin Spray (3-in-1 Set)',
+        thumbnail: AppImages.productImage30,
+        stock: 3,
+        price: 29.99,
+        salePrice: 27.99,
+        description: 'Unlock your beard’s full potential with the Dari Mooch Beard Growth Supplement Kit.',
+        brand: brands[6],
+        categoryId: '13',
+        productType: 'ProductType.single',
+        sku: "BEARDOIL-KIT-DARIMOOCH"),
 
     // 031
     ProductModel(
@@ -963,231 +914,198 @@ class AppDummyModel {
 
     // 032
     ProductModel(
-      id: '32',
-      title: 'Apple iPhone 11 – 64GB/128GB (Matte Green)',
-      thumbnail: AppImages.productImage32,
-      price: 499.99,
-      salePrice: 475.99,
-      stock: 3,
-      productType: 'ProductType.variable',
-      brand: brands[2],
-      categoryId: '19',
-      description:
-          'The iPhone 11 delivers the perfect balance of performance, style, and innovation. Featuring a stunning 6.1” Liquid Retina HD display, powerful A13 Bionic chip, and dual 12MP ultra wide + wide cameras, it’s built for everything—from photography and gaming to everyday tasks. With long battery life and a sleek matte green finish, it’s as beautiful as it is fast.',
-      sku: "iPHONE-11",
-      productAttributes: [
-        ProductAttributeModel(
-          name: 'Storage',
-          values: ['64GB', '128GB', '512GB'],
-        ),
-      ],
-      productVariations: [
-        ProductVariationModel(
-          id: '1',
-          attributeValues: {'Storage': '64GB'},
-          image: AppImages.productImage32,
-          stock: 3,
-          price: 499.99,
-          salePrice: 475.99,
-          description: 'This is description of 64GB',
-        ),
-        ProductVariationModel(
-          id: '2',
-          attributeValues: {'Storage': '128GB'},
-          image: AppImages.productImage32,
-          stock: 3,
-          price: 566.99,
-          salePrice: 499.99,
-          description: 'This is description of 128GB',
-        ),
-        ProductVariationModel(
-          id: '3',
-          attributeValues: {'Storage': '512GB'},
-          image: AppImages.productImage32,
-          stock: 3,
-          price: 699.99,
-          salePrice: 599.99,
-          description: 'This is description of 512GB',
-        ),
-      ],
-    ),
+        id: '32',
+        title: 'Apple iPhone 11 – 64GB/128GB (Matte Green)',
+        thumbnail: AppImages.productImage32,
+        price: 499.99,
+        salePrice: 475.99,
+        stock: 3,
+        productType: 'ProductType.variable',
+        brand: brands[2],
+        categoryId: '19',
+        description:
+            'The iPhone 11 delivers the perfect balance of performance, style, and innovation. Featuring a stunning 6.1” Liquid Retina HD display, powerful A13 Bionic chip, and dual 12MP ultra wide + wide cameras, it’s built for everything—from photography and gaming to everyday tasks. With long battery life and a sleek matte green finish, it’s as beautiful as it is fast.',
+        sku: "iPHONE-11",
+        productAttributes: [
+          ProductAttributeModel(name: 'Storage', values: ['64GB', '128GB', '512GB'])
+        ],
+        productVariations: [
+          ProductVariationModel(
+              id: '1',
+              attributeValues: {'Storage': '64GB'},
+              image: AppImages.productImage32,
+              stock: 3,
+              price: 499.99,
+              salePrice: 475.99,
+              description: 'This is description of 64GB'),
+          ProductVariationModel(
+              id: '2',
+              attributeValues: {'Storage': '128GB'},
+              image: AppImages.productImage32,
+              stock: 3,
+              price: 566.99,
+              salePrice: 499.99,
+              description: 'This is description of 128GB'),
+          ProductVariationModel(
+              id: '3',
+              attributeValues: {'Storage': '512GB'},
+              image: AppImages.productImage32,
+              stock: 3,
+              price: 699.99,
+              salePrice: 599.99,
+              description: 'This is description of 512GB')
+        ]),
 
     // 033
     ProductModel(
-      id: '33',
-      title: 'Apple iPhone 12 – 64GB/128GB/256GB (Multiple Colors)',
-      price: 849,
-      thumbnail: AppImages.productImage33a,
-      images: [
-        AppImages.productImage33a,
-        AppImages.productImage33b,
-        AppImages.productImage33c,
-        AppImages.productImage33d,
-      ],
-      description:
-          'iPhone 12 brings a powerful blend of speed, style, and innovation. Equipped with a 6.1” Super Retina XDR display and the blazing-fast A14 Bionic chip, this device delivers next-level performance. The dual 12MP camera system captures stunning photos and 4K videos, while Ceramic Shield ensures better durability. Choose from a bold range of colors to match your vibe.',
-      brand: brands[2],
-      stock: 3,
-      productType: 'ProductType.variable',
-      categoryId: '19',
-      sku: "iPHONE-12",
-      productAttributes: [
-        ProductAttributeModel(
-          name: 'Storage',
-          values: ['64GB', '128GB', '512GB'],
-        ),
-        ProductAttributeModel(
-          name: 'Color',
-          values: ['Green', 'Blue', 'Red', 'Black'],
-        ),
-      ],
-      productVariations: [
-        ProductVariationModel(
-          id: '1',
-          attributeValues: {'Storage': '64GB', 'Color': 'Green'},
-          image: AppImages.productImage33b,
-          stock: 3,
-          price: 849,
-          salePrice: 799,
-          description: 'This is description of 64GB Green',
-        ),
-        ProductVariationModel(
-          id: '2',
-          attributeValues: {'Storage': '64GB', 'Color': 'Blue'},
-          image: AppImages.productImage33c,
-          stock: 3,
-          price: 849,
-          salePrice: 799,
-          description: 'This is description of 64GB Blue',
-        ),
-        ProductVariationModel(
-          id: '3',
-          attributeValues: {'Storage': '64GB', 'Color': 'Red'},
-          image: AppImages.productImage33d,
-          stock: 3,
-          price: 849,
-          salePrice: 799,
-          description: 'This is description of 64GB Red',
-        ),
-        ProductVariationModel(
-          id: '4',
-          attributeValues: {'Storage': '64GB', 'Color': 'Black'},
-          image: AppImages.productImage33a,
-          stock: 3,
-          price: 849,
-          salePrice: 799,
-          description: 'This is description of 64GB Black',
-        ),
-        ProductVariationModel(
-          id: '5',
-          attributeValues: {'Storage': '128GB', 'Color': 'Green'},
-          image: AppImages.productImage33b,
-          stock: 3,
-          price: 849,
-          salePrice: 799,
-          description: 'This is description of 128GB Green',
-        ),
-        ProductVariationModel(
-          id: '6',
-          attributeValues: {'Storage': '128GB', 'Color': 'Blue'},
-          image: AppImages.productImage33c,
-          stock: 3,
-          price: 849,
-          salePrice: 799,
-          description: 'This is description of 128GB Blue',
-        ),
-        ProductVariationModel(
-          id: '7',
-          attributeValues: {'Storage': '128GB', 'Color': 'Red'},
-          image: AppImages.productImage33d,
-          stock: 3,
-          price: 849,
-          salePrice: 799,
-          description: 'This is description of 128GB Red',
-        ),
-        ProductVariationModel(
-          id: '8',
-          attributeValues: {'Storage': '128GB', 'Color': 'Black'},
-          image: AppImages.productImage33a,
-          stock: 3,
-          price: 849,
-          salePrice: 799,
-          description: 'This is description of 128GB Black',
-        ),
-        ProductVariationModel(
-          id: '9',
-          attributeValues: {'Storage': '256GB', 'Color': 'Green'},
-          image: AppImages.productImage33b,
-          stock: 3,
-          price: 849,
-          salePrice: 799,
-          description: 'This is description of 256GB Green',
-        ),
-        ProductVariationModel(
-          id: '10',
-          attributeValues: {'Storage': '256GB', 'Color': 'Blue'},
-          image: AppImages.productImage33c,
-          stock: 3,
-          price: 849,
-          salePrice: 799,
-          description: 'This is description of 256GB Blue',
-        ),
-        ProductVariationModel(
-          id: '11',
-          attributeValues: {'Storage': '256GB', 'Color': 'Red'},
-          image: AppImages.productImage33d,
-          stock: 3,
-          price: 849,
-          salePrice: 799,
-          description: 'This is description of 256GB Red',
-        ),
-        ProductVariationModel(
-          id: '12',
-          attributeValues: {'Storage': '256GB', 'Color': 'Black'},
-          image: AppImages.productImage33a,
-          stock: 3,
-          price: 849,
-          salePrice: 799,
-          description: 'This is description of 256GB Black',
-        ),
-        ProductVariationModel(
-          id: '13',
-          attributeValues: {'Storage': '512GB', 'Color': 'Green'},
-          image: AppImages.productImage33b,
-          stock: 3,
-          price: 849,
-          salePrice: 799,
-          description: 'This is description of 512GB Green',
-        ),
-        ProductVariationModel(
-          id: '14',
-          attributeValues: {'Storage': '512GB', 'Color': 'Blue'},
-          image: AppImages.productImage33c,
-          stock: 3,
-          price: 849,
-          salePrice: 799,
-          description: 'This is description of 512GB Blue',
-        ),
-        ProductVariationModel(
-          id: '15',
-          attributeValues: {'Storage': '512GB', 'Color': 'Red'},
-          image: AppImages.productImage33d,
-          stock: 3,
-          price: 849,
-          salePrice: 799,
-          description: 'This is description of 512GB Red',
-        ),
-        ProductVariationModel(
-          id: '16',
-          attributeValues: {'Storage': '512GB', 'Color': 'Black'},
-          image: AppImages.productImage33a,
-          stock: 3,
-          price: 849,
-          salePrice: 799,
-          description: 'This is description of 512GB Black',
-        ),
-      ],
-    ),
+        id: '33',
+        title: 'Apple iPhone 12 – 64GB/128GB/256GB (Multiple Colors)',
+        price: 849,
+        thumbnail: AppImages.productImage33a,
+        images: [AppImages.productImage33b, AppImages.productImage33c, AppImages.productImage33d],
+        description:
+            'iPhone 12 brings a powerful blend of speed, style, and innovation. Equipped with a 6.1” Super Retina XDR display and the blazing-fast A14 Bionic chip, this device delivers next-level performance. The dual 12MP camera system captures stunning photos and 4K videos, while Ceramic Shield ensures better durability. Choose from a bold range of colors to match your vibe.',
+        brand: brands[2],
+        stock: 3,
+        productType: 'ProductType.variable',
+        categoryId: '19',
+        sku: "iPHONE-12",
+        productAttributes: [
+          ProductAttributeModel(name: 'Storage', values: ['64GB', '128GB', '512GB']),
+          ProductAttributeModel(name: 'Color', values: ['Green', 'Blue', 'Red', 'Black'])
+        ],
+        productVariations: [
+          ProductVariationModel(
+              id: '1',
+              attributeValues: {'Storage': '64GB', 'Color': 'Green'},
+              image: AppImages.productImage33b,
+              stock: 3,
+              price: 849,
+              salePrice: 799,
+              description: 'This is description of 64GB Green'),
+          ProductVariationModel(
+              id: '2',
+              attributeValues: {'Storage': '64GB', 'Color': 'Blue'},
+              image: AppImages.productImage33c,
+              stock: 3,
+              price: 849,
+              salePrice: 799,
+              description: 'This is description of 64GB Blue'),
+          ProductVariationModel(
+              id: '3',
+              attributeValues: {'Storage': '64GB', 'Color': 'Red'},
+              image: AppImages.productImage33d,
+              stock: 3,
+              price: 849,
+              salePrice: 799,
+              description: 'This is description of 64GB Red'),
+          ProductVariationModel(
+              id: '4',
+              attributeValues: {'Storage': '64GB', 'Color': 'Black'},
+              image: AppImages.productImage33a,
+              stock: 3,
+              price: 849,
+              salePrice: 799,
+              description: 'This is description of 64GB Black'),
+          ProductVariationModel(
+              id: '5',
+              attributeValues: {'Storage': '128GB', 'Color': 'Green'},
+              image: AppImages.productImage33b,
+              stock: 3,
+              price: 849,
+              salePrice: 799,
+              description: 'This is description of 128GB Green'),
+          ProductVariationModel(
+            id: '6',
+            attributeValues: {'Storage': '128GB', 'Color': 'Blue'},
+            image: AppImages.productImage33c,
+            stock: 3,
+            price: 849,
+            salePrice: 799,
+            description: 'This is description of 128GB Blue',
+          ),
+          ProductVariationModel(
+              id: '7',
+              attributeValues: {'Storage': '128GB', 'Color': 'Red'},
+              image: AppImages.productImage33d,
+              stock: 3,
+              price: 849,
+              salePrice: 799,
+              description: 'This is description of 128GB Red'),
+          ProductVariationModel(
+              id: '8',
+              attributeValues: {'Storage': '128GB', 'Color': 'Black'},
+              image: AppImages.productImage33a,
+              stock: 3,
+              price: 849,
+              salePrice: 799,
+              description: 'This is description of 128GB Black'),
+          ProductVariationModel(
+              id: '9',
+              attributeValues: {'Storage': '256GB', 'Color': 'Green'},
+              image: AppImages.productImage33b,
+              stock: 3,
+              price: 849,
+              salePrice: 799,
+              description: 'This is description of 256GB Green'),
+          ProductVariationModel(
+              id: '10',
+              attributeValues: {'Storage': '256GB', 'Color': 'Blue'},
+              image: AppImages.productImage33c,
+              stock: 3,
+              price: 849,
+              salePrice: 799,
+              description: 'This is description of 256GB Blue'),
+          ProductVariationModel(
+            id: '11',
+            attributeValues: {'Storage': '256GB', 'Color': 'Red'},
+            image: AppImages.productImage33d,
+            stock: 3,
+            price: 849,
+            salePrice: 799,
+            description: 'This is description of 256GB Red',
+          ),
+          ProductVariationModel(
+              id: '12',
+              attributeValues: {'Storage': '256GB', 'Color': 'Black'},
+              image: AppImages.productImage33a,
+              stock: 3,
+              price: 849,
+              salePrice: 799,
+              description: 'This is description of 256GB Black'),
+          ProductVariationModel(
+              id: '13',
+              attributeValues: {'Storage': '512GB', 'Color': 'Green'},
+              image: AppImages.productImage33b,
+              stock: 3,
+              price: 849,
+              salePrice: 799,
+              description: 'This is description of 512GB Green'),
+          ProductVariationModel(
+              id: '14',
+              attributeValues: {'Storage': '512GB', 'Color': 'Blue'},
+              image: AppImages.productImage33c,
+              stock: 3,
+              price: 849,
+              salePrice: 799,
+              description: 'This is description of 512GB Blue'),
+          ProductVariationModel(
+              id: '15',
+              attributeValues: {'Storage': '512GB', 'Color': 'Red'},
+              image: AppImages.productImage33d,
+              stock: 3,
+              price: 849,
+              salePrice: 799,
+              description: 'This is description of 512GB Red'),
+          ProductVariationModel(
+              id: '16',
+              attributeValues: {'Storage': '512GB', 'Color': 'Black'},
+              image: AppImages.productImage33a,
+              stock: 3,
+              price: 849,
+              salePrice: 799,
+              description: 'This is description of 512GB Black'),
+        ]),
 
     // 034
     ProductModel(
@@ -1223,19 +1141,17 @@ class AppDummyModel {
 
     // 036
     ProductModel(
-      id: '36',
-      title:
-          'J. LA PROTECTION – Daily Hydrating, Brightening & Sun Protection Cream',
-      price: 14.99,
-      thumbnail: AppImages.productImage36,
-      stock: 3,
-      productType: 'ProductType.single',
-      sku: "SUN-PROTECTION-J-LA",
-      categoryId: '12',
-      brand: brands[9],
-      description:
-          "J. LA PROTECTION is your all-in-one solution for everyday skincare. This luxurious cream hydrates your skin, brightens your complexion, and provides essential sun protection — all in a smooth, non-greasy formula. Perfect for daily use, it keeps your skin fresh, protected, and radiant all day long.",
-    ),
+        id: '36',
+        title: 'J. LA PROTECTION – Daily Hydrating, Brightening & Sun Protection Cream',
+        price: 14.99,
+        thumbnail: AppImages.productImage36,
+        stock: 3,
+        productType: 'ProductType.single',
+        sku: "SUN-PROTECTION-J-LA",
+        categoryId: '12',
+        brand: brands[9],
+        description:
+            "J. LA PROTECTION is your all-in-one solution for everyday skincare. This luxurious cream hydrates your skin, brightens your complexion, and provides essential sun protection — all in a smooth, non-greasy formula. Perfect for daily use, it keeps your skin fresh, protected, and radiant all day long."),
 
     // 037
     ProductModel(
@@ -1254,101 +1170,94 @@ class AppDummyModel {
 
     // 038
     ProductModel(
-      id: '38',
-      title: 'Space Gray TouchBar Laptop – 13” Retina Display',
-      price: 1299,
-      salePrice: 1133.99,
-      stock: 34,
-      thumbnail: AppImages.productImage38a,
-      images: [AppImages.productImage38b, AppImages.productImage38c],
-      productType: 'ProductType.variable',
-      categoryId: '18',
-      sku: "LAPTOP-HP",
-      brand: brands[8],
-      description:
-          'Elevate your workflow with this elegant space gray TouchBar laptop. Featuring a responsive TouchBar, retina-quality display, and a backlit keyboard, it’s ideal for creatives, developers, and professionals. The slim design paired with top-tier performance makes it a premium choice for multitasking on the go.',
-      productAttributes: [
-        ProductAttributeModel(name: 'Storage', values: ['512GB', '1TB']),
-      ],
-      productVariations: [
-        ProductVariationModel(
-          id: '1',
-          attributeValues: {'Storage': '512GB'},
-          stock: 23,
-          description: 'This is description of 512GB',
-          sku: 'SKU-HP',
-          price: 899.99,
-          salePrice: 869.99,
-          image: AppImages.productImage38b,
-        ),
-        ProductVariationModel(
-          id: '2',
-          attributeValues: {'Storage': '1TB'},
-          stock: 23,
-          description: 'This is description of 1TB',
-          sku: 'SKU-HP',
-          price: 999.99,
-          salePrice: 969.99,
-          image: AppImages.productImage38c,
-        ),
-      ],
-    ),
+        id: '38',
+        title: 'Space Gray TouchBar Laptop – 13” Retina Display',
+        price: 1299,
+        salePrice: 1133.99,
+        stock: 34,
+        thumbnail: AppImages.productImage38a,
+        images: [AppImages.productImage38b, AppImages.productImage38c],
+        productType: 'ProductType.variable',
+        categoryId: '18',
+        sku: "LAPTOP-HP",
+        brand: brands[8],
+        description:
+            'Elevate your workflow with this elegant space gray TouchBar laptop. Featuring a responsive TouchBar, retina-quality display, and a backlit keyboard, it’s ideal for creatives, developers, and professionals. The slim design paired with top-tier performance makes it a premium choice for multitasking on the go.',
+        productAttributes: [
+          ProductAttributeModel(name: 'Storage', values: ['512GB', '1TB'])
+        ],
+        productVariations: [
+          ProductVariationModel(
+              id: '1',
+              attributeValues: {'Storage': '512GB'},
+              stock: 23,
+              description: 'This is description of 512GB',
+              sku: 'SKU-HP',
+              price: 899.99,
+              salePrice: 869.99,
+              image: AppImages.productImage38b),
+          ProductVariationModel(
+              id: '2',
+              attributeValues: {'Storage': '1TB'},
+              stock: 23,
+              description: 'This is description of 1TB',
+              sku: 'SKU-HP',
+              price: 999.99,
+              salePrice: 969.99,
+              image: AppImages.productImage38c)
+        ]),
 
     // 039
     ProductModel(
-      id: '39',
-      title: 'Matte Black UltraBook – 15.6” Full HD Display',
-      price: 999,
-      salePrice: 899,
-      stock: 2,
-      thumbnail: AppImages.productImage39,
-      productType: 'ProductType.variable',
-      categoryId: '18',
-      sku: "LAPTOP-HP",
-      brand: brands[8],
-      description:
-          'Engineered for elegance and efficiency, this matte black UltraBook delivers premium performance in a sleek, minimalist design. With its edge-to-edge 15.6” Full HD display, whisper-quiet keyboard, and slim form factor, it’s perfect for professionals, students, and power users on the go.',
-      productAttributes: [
-        ProductAttributeModel(name: 'Storage', values: ['512GB', '1TB']),
-      ],
-      productVariations: [
-        ProductVariationModel(
-          id: '1',
-          attributeValues: {'Storage': '512GB'},
-          stock: 23,
-          description: 'This is description of 512GB',
-          sku: 'SKU-HP',
-          price: 899.99,
-          salePrice: 869.99,
-          image: AppImages.productImage22,
-        ),
-        ProductVariationModel(
-          id: '2',
-          attributeValues: {'Storage': '1TB'},
-          stock: 23,
-          description: 'This is description of 1TB',
-          sku: 'SKU-HP',
-          price: 999.99,
-          salePrice: 969.99,
-          image: AppImages.productImage22,
-        ),
-      ],
-    ),
+        id: '39',
+        title: 'Matte Black UltraBook – 15.6” Full HD Display',
+        price: 999,
+        salePrice: 899,
+        stock: 2,
+        thumbnail: AppImages.productImage39,
+        productType: 'ProductType.variable',
+        categoryId: '18',
+        sku: "LAPTOP-HP",
+        brand: brands[8],
+        description:
+            'Engineered for elegance and efficiency, this matte black UltraBook delivers premium performance in a sleek, minimalist design. With its edge-to-edge 15.6” Full HD display, whisper-quiet keyboard, and slim form factor, it’s perfect for professionals, students, and power users on the go.',
+        productAttributes: [
+          ProductAttributeModel(name: 'Storage', values: ['512GB', '1TB'])
+        ],
+        productVariations: [
+          ProductVariationModel(
+              id: '1',
+              attributeValues: {'Storage': '512GB'},
+              stock: 23,
+              description: 'This is description of 512GB',
+              sku: 'SKU-HP',
+              price: 899.99,
+              salePrice: 869.99,
+              image: AppImages.productImage22),
+          ProductVariationModel(
+              id: '2',
+              attributeValues: {'Storage': '1TB'},
+              stock: 23,
+              description: 'This is description of 1TB',
+              sku: 'SKU-HP',
+              price: 999.99,
+              salePrice: 969.99,
+              image: AppImages.productImage22)
+        ]),
     // 040
     ProductModel(
-      id: '40',
-      title: 'VortexEdge 27” Gaming Monitor – 165Hz QHD Display',
-      thumbnail: AppImages.productImage40,
-      productType: 'ProductType.single',
-      stock: 2,
-      price: 399.99,
-      salePrice: 375.99,
-      brand: brands[4],
-      description:
-          'Dive into stunning visuals and lightning-fast gameplay with the VortexEdge 27” Gaming Monitor. Featuring a frameless QHD display with a blazing 165Hz refresh rate, 1ms response time, and adaptive sync technology, it’s built for serious gamers who demand precision, speed, and visual clarity.',
-      sku: "MONITOR-LCD-BLOODY",
-      categoryId: '17',
-    ),
+        id: '40',
+        title: 'VortexEdge 27” Gaming Monitor – 165Hz QHD Display',
+        thumbnail: AppImages.productImage40,
+        productType: 'ProductType.single',
+        stock: 2,
+        price: 399.99,
+        salePrice: 375.99,
+        brand: brands[4],
+        description:
+            'Dive into stunning visuals and lightning-fast gameplay with the VortexEdge 27” Gaming Monitor. Featuring a frameless QHD display with a blazing 165Hz refresh rate, 1ms response time, and adaptive sync technology, it’s built for serious gamers who demand precision, speed, and visual clarity.',
+        sku: "MONITOR-LCD-BLOODY",
+        categoryId: '17'),
 
     // 041
     ProductModel(
@@ -1384,78 +1293,73 @@ class AppDummyModel {
 
     // 043
     ProductModel(
-      id: '43',
-      title: 'ShadowCore 27” Curved Gaming Monitor – 240Hz UltraFast Display',
-      thumbnail: AppImages.productImage43,
-      stock: 21,
-      price: 479.99,
-      salePrice: 452.99,
-      productType: 'ProductType.single',
-      categoryId: '17',
-      isFeatured: false,
-      brand: brands[4],
-      sku: "MONITOR-GAMING-BLOODY",
-      description:
-          "The ShadowCore 27” Gaming Monitor is crafted for elite gamers who demand precision and immersion. Featuring a breathtaking curved 240Hz display, ultra-low 1ms response time, and G-SYNC/FreeSync compatibility, every frame is fluid, fast, and flawless. Its aggressive stand design adds a commanding presence to your battle station.",
-    ),
+        id: '43',
+        title: 'ShadowCore 27” Curved Gaming Monitor – 240Hz UltraFast Display',
+        thumbnail: AppImages.productImage43,
+        stock: 21,
+        price: 479.99,
+        salePrice: 452.99,
+        productType: 'ProductType.single',
+        categoryId: '17',
+        isFeatured: false,
+        brand: brands[4],
+        sku: "MONITOR-GAMING-BLOODY",
+        description:
+            "The ShadowCore 27” Gaming Monitor is crafted for elite gamers who demand precision and immersion. Featuring a breathtaking curved 240Hz display, ultra-low 1ms response time, and G-SYNC/FreeSync compatibility, every frame is fluid, fast, and flawless. Its aggressive stand design adds a commanding presence to your battle station."),
 
     // 044
     ProductModel(
-      id: '44',
-      title: 'StrikeBlade X7 – Ergonomic Wireless Gaming Mouse (Blue Edition)',
-      thumbnail: AppImages.productImage44,
-      stock: 21,
-      price: 49.99,
-      productType: 'ProductType.single',
-      categoryId: '17',
-      isFeatured: false,
-      brand: brands[4],
-      sku: "MOUSE-BLOODY",
-      description:
-          "The StrikeBlade X7 delivers responsive, lag-free performance with bold aesthetics. Its ergonomic grip ensures comfort during long sessions, while high-DPI tracking and customizable buttons make it perfect for gamers, designers, and power users. The vibrant blue & gray color combo adds futuristic flair to your setup.",
-    ),
+        id: '44',
+        title: 'StrikeBlade X7 – Ergonomic Wireless Gaming Mouse (Blue Edition)',
+        thumbnail: AppImages.productImage44,
+        stock: 21,
+        price: 49.99,
+        productType: 'ProductType.single',
+        categoryId: '17',
+        isFeatured: false,
+        brand: brands[4],
+        sku: "MOUSE-BLOODY",
+        description:
+            "The StrikeBlade X7 delivers responsive, lag-free performance with bold aesthetics. Its ergonomic grip ensures comfort during long sessions, while high-DPI tracking and customizable buttons make it perfect for gamers, designers, and power users. The vibrant blue & gray color combo adds futuristic flair to your setup."),
 
     // 045
     ProductModel(
-      id: '45',
-      title: 'North Star Classic Backpack – Red & Black Edition',
-      thumbnail: AppImages.productImage45a,
-      images: [AppImages.productImage45b, AppImages.productImage45a],
-      stock: 21,
-      price: 29.99,
-      salePrice: 28.99,
-      productType: 'ProductType.variable',
-      categoryId: '14',
-      brand: brands[11],
-      sku: "NORTHSTAR_BAG",
-      description:
-          "Step out in style with the North Star Classic Backpack, featuring a striking red-and-black design and practical layout for everyday use. Whether you’re heading to school, work, or a weekend trip, this durable backpack keeps your essentials organized and secure.",
-      productAttributes: [
-        ProductAttributeModel(name: 'Color', values: ['Red', 'Green']),
-      ],
-      productVariations: [
-        ProductVariationModel(
-          id: '1',
-          attributeValues: {'Color': 'Red'},
-          stock: 23,
-          description: 'This is description of Red',
-          sku: 'SKU-NORTHSTAR',
-          price: 29.99,
-          salePrice: 28.99,
-          image: AppImages.productImage45a,
-        ),
-        ProductVariationModel(
-          id: '2',
-          attributeValues: {'Color': 'Green'},
-          stock: 23,
-          description: 'This is description of Green',
-          sku: 'SKU-NORTHSTAR',
-          price: 29.99,
-          salePrice: 28.99,
-          image: AppImages.productImage45b,
-        ),
-      ],
-    ),
+        id: '45',
+        title: 'North Star Classic Backpack – Red & Black Edition',
+        thumbnail: AppImages.productImage45a,
+        images: [AppImages.productImage45b],
+        stock: 21,
+        price: 29.99,
+        salePrice: 28.99,
+        productType: 'ProductType.variable',
+        categoryId: '14',
+        brand: brands[11],
+        sku: "NORTHSTAR_BAG",
+        description:
+            "Step out in style with the North Star Classic Backpack, featuring a striking red-and-black design and practical layout for everyday use. Whether you’re heading to school, work, or a weekend trip, this durable backpack keeps your essentials organized and secure.",
+        productAttributes: [
+          ProductAttributeModel(name: 'Color', values: ['Red', 'Green'])
+        ],
+        productVariations: [
+          ProductVariationModel(
+              id: '1',
+              attributeValues: {'Color': 'Red'},
+              stock: 23,
+              description: 'This is description of Red',
+              sku: 'SKU-NORTHSTAR',
+              price: 29.99,
+              salePrice: 28.99,
+              image: AppImages.productImage45a),
+          ProductVariationModel(
+              id: '2',
+              attributeValues: {'Color': 'Green'},
+              stock: 23,
+              description: 'This is description of Green',
+              sku: 'SKU-NORTHSTAR',
+              price: 29.99,
+              salePrice: 28.99,
+              image: AppImages.productImage45b),
+        ]),
 
     // 046
     ProductModel(
@@ -1506,45 +1410,42 @@ class AppDummyModel {
 
     // 049
     ProductModel(
-      id: '49',
-      title: '“S” Varsity Bomber Jacket – Red & White Edition',
-      thumbnail: AppImages.productImage49a,
-      images: [AppImages.productImage49a, AppImages.productImage49b],
-      stock: 21,
-      price: 89.99,
-      salePrice: 84.99,
-      productType: 'ProductType.variable',
-      categoryId: '8',
-      brand: brands[5],
-      sku: "BREAKOUT-JACKET-RED",
-      description:
-          "Make a statement with this retro-inspired Varsity Bomber Jacket, featuring a bold red body, contrasting white leather-look sleeves, and a stitched S emblem on the chest. Whether you’re channeling school spirit or street-style cool, this jacket brings timeless edge and warmth in one fresh fit.",
-      productAttributes: [
-        ProductAttributeModel(name: 'Color', values: ['Blue', 'Red']),
-      ],
-      productVariations: [
-        ProductVariationModel(
-          id: '1',
-          attributeValues: {'Color': 'Blue'},
-          stock: 23,
-          description: 'This is description of Blue',
-          sku: 'SKU-BREAKOUT',
-          price: 89.99,
-          salePrice: 84.99,
-          image: AppImages.productImage49a,
-        ),
-        ProductVariationModel(
-          id: '2',
-          attributeValues: {'Color': 'Red'},
-          stock: 23,
-          description: 'This is description of Red',
-          sku: 'SKU-BREAKOUT',
-          price: 89.99,
-          salePrice: 84.99,
-          image: AppImages.productImage49b,
-        ),
-      ],
-    ),
+        id: '49',
+        title: '“S” Varsity Bomber Jacket – Red & White Edition',
+        thumbnail: AppImages.productImage49a,
+        images: [AppImages.productImage49b],
+        stock: 21,
+        price: 89.99,
+        salePrice: 84.99,
+        productType: 'ProductType.variable',
+        categoryId: '8',
+        brand: brands[5],
+        sku: "BREAKOUT-JACKET-RED",
+        description:
+            "Make a statement with this retro-inspired Varsity Bomber Jacket, featuring a bold red body, contrasting white leather-look sleeves, and a stitched S emblem on the chest. Whether you’re channeling school spirit or street-style cool, this jacket brings timeless edge and warmth in one fresh fit.",
+        productAttributes: [
+          ProductAttributeModel(name: 'Color', values: ['Blue', 'Red'])
+        ],
+        productVariations: [
+          ProductVariationModel(
+              id: '1',
+              attributeValues: {'Color': 'Blue'},
+              stock: 23,
+              description: 'This is description of Blue',
+              sku: 'SKU-BREAKOUT',
+              price: 89.99,
+              salePrice: 84.99,
+              image: AppImages.productImage49a),
+          ProductVariationModel(
+              id: '2',
+              attributeValues: {'Color': 'Red'},
+              stock: 23,
+              description: 'This is description of Red',
+              sku: 'SKU-BREAKOUT',
+              price: 89.99,
+              salePrice: 84.99,
+              image: AppImages.productImage49b),
+        ]),
 
     // 050
     ProductModel(
@@ -1722,8 +1623,7 @@ class AppDummyModel {
     // 061
     ProductModel(
       id: '61',
-      title:
-          'Classic Ceramic Table Lamp – Ivory & Brass Finish with Fabric Shade',
+      title: 'Classic Ceramic Table Lamp – Ivory & Brass Finish with Fabric Shade',
       thumbnail: AppImages.productImage61,
       stock: 2,
       price: 129,
@@ -1816,86 +1716,72 @@ class AppDummyModel {
 
     // 067
     ProductModel(
-      id: '67',
-      title: 'AquaCore Classic Polo',
-      thumbnail: AppImages.productImage67a,
-      images: [
-        AppImages.productImage67a,
-        AppImages.productImage67b,
-        AppImages.productImage67c,
-      ],
-      stock: 2,
-      price: 8,
-      productType: 'ProductType.variable',
-      categoryId: '7',
-      brand: brands[12],
-      sku: "POLO-SHIRT",
-      description:
-          "Add a splash of freshness to your wardrobe with the AquaCore Classic Polo. Made from breathable cotton, it features a sleek collar, button placket, and a perfect slim fit for all-day comfort. Ideal for both casual outings and semi-formal looks.",
-      productAttributes: [
-        ProductAttributeModel(
-          name: 'Color',
-          values: ['Blue', 'Dark Blue', 'Green'],
-        ),
-        ProductAttributeModel(name: 'Size', values: ['Medium', 'Large']),
-      ],
-      productVariations: [
-        ProductVariationModel(
-          id: '1',
-          attributeValues: {'Color': 'Blue', 'Size': 'Medium'},
-          stock: 23,
-          description: 'This is description of Blue',
-          sku: 'SKU-BREAKOUT',
-          price: 8,
-          image: AppImages.productImage67a,
-        ),
-        ProductVariationModel(
-          id: '2',
-          attributeValues: {'Color': 'Blue', 'Size': 'Large'},
-          stock: 23,
-          description: 'This is description of Blue',
-          sku: 'SKU-BREAKOUT',
-          price: 8,
-          image: AppImages.productImage67b,
-        ),
-        ProductVariationModel(
-          id: '3',
-          attributeValues: {'Color': 'Dark Blue', 'Size': 'Medium'},
-          stock: 23,
-          description: 'This is description of Blue',
-          sku: 'SKU-BREAKOUT',
-          price: 8,
-          image: AppImages.productImage67c,
-        ),
-        ProductVariationModel(
-          id: '4',
-          attributeValues: {'Color': 'Dark Blue', 'Size': 'Large'},
-          stock: 23,
-          description: 'This is description of Blue',
-          sku: 'SKU-BREAKOUT',
-          price: 8,
-          image: AppImages.productImage67a,
-        ),
-        ProductVariationModel(
-          id: '5',
-          attributeValues: {'Color': 'Green', 'Size': 'Medium'},
-          stock: 23,
-          description: 'This is description of Blue',
-          sku: 'SKU-BREAKOUT',
-          price: 8,
-          image: AppImages.productImage67b,
-        ),
-        ProductVariationModel(
-          id: '6',
-          attributeValues: {'Color': 'Green', 'Size': 'Large'},
-          stock: 23,
-          description: 'This is description of Blue',
-          sku: 'SKU-BREAKOUT',
-          price: 8,
-          image: AppImages.productImage67a,
-        ),
-      ],
-    ),
+        id: '67',
+        title: 'AquaCore Classic Polo',
+        thumbnail: AppImages.productImage67a,
+        images: [AppImages.productImage67b, AppImages.productImage67c],
+        stock: 2,
+        price: 8,
+        productType: 'ProductType.variable',
+        categoryId: '7',
+        brand: brands[12],
+        sku: "POLO-SHIRT",
+        description:
+            "Add a splash of freshness to your wardrobe with the AquaCore Classic Polo. Made from breathable cotton, it features a sleek collar, button placket, and a perfect slim fit for all-day comfort. Ideal for both casual outings and semi-formal looks.",
+        productAttributes: [
+          ProductAttributeModel(name: 'Color', values: ['Blue', 'Dark Blue', 'Green']),
+          ProductAttributeModel(name: 'Size', values: ['Medium', 'Large'])
+        ],
+        productVariations: [
+          ProductVariationModel(
+              id: '1',
+              attributeValues: {'Color': 'Blue', 'Size': 'Medium'},
+              stock: 23,
+              description: 'This is description of Blue',
+              sku: 'SKU-BREAKOUT',
+              price: 8,
+              image: AppImages.productImage67a),
+          ProductVariationModel(
+              id: '2',
+              attributeValues: {'Color': 'Blue', 'Size': 'Large'},
+              stock: 23,
+              description: 'This is description of Blue',
+              sku: 'SKU-BREAKOUT',
+              price: 8,
+              image: AppImages.productImage67b),
+          ProductVariationModel(
+              id: '3',
+              attributeValues: {'Color': 'Dark Blue', 'Size': 'Medium'},
+              stock: 23,
+              description: 'This is description of Blue',
+              sku: 'SKU-BREAKOUT',
+              price: 8,
+              image: AppImages.productImage67c),
+          ProductVariationModel(
+              id: '4',
+              attributeValues: {'Color': 'Dark Blue', 'Size': 'Large'},
+              stock: 23,
+              description: 'This is description of Blue',
+              sku: 'SKU-BREAKOUT',
+              price: 8,
+              image: AppImages.productImage67a),
+          ProductVariationModel(
+              id: '5',
+              attributeValues: {'Color': 'Green', 'Size': 'Medium'},
+              stock: 23,
+              description: 'This is description of Blue',
+              sku: 'SKU-BREAKOUT',
+              price: 8,
+              image: AppImages.productImage67b),
+          ProductVariationModel(
+              id: '6',
+              attributeValues: {'Color': 'Green', 'Size': 'Large'},
+              stock: 23,
+              description: 'This is description of Blue',
+              sku: 'SKU-BREAKOUT',
+              price: 8,
+              image: AppImages.productImage67a)
+        ]),
 
     // 068
     ProductModel(
@@ -1911,4 +1797,6 @@ class AppDummyModel {
       description: "Blue Polo Jeans with white Shades of one size only",
     ),
   ];
+
+
 }

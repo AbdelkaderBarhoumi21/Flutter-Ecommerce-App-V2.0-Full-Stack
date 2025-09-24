@@ -18,8 +18,22 @@ class ProductRepository extends GetxController {
 
   //! function to upload list of products to firebase
   Future<void> uploadProducts(List<ProductModel> products) async {
+    /*
+              uploadImagesMap = {
+          'assets/products/product 15.png': 'https://cloudinary.com/p15.png',
+           'assets/products/product 16.png': 'https://cloudinary.com/p16.png',
+          };
+          uploadImagesMap.entries → [
+           MapEntry('assets/products/product 15.png', 'https://cloudinary.com/p15.png'),
+           MapEntry('assets/products/product 16.png', 'https://cloudinary.com/p16.png'),
+           Si trouvé → match = MapEntry(assetPath, url)
+           Si non trouvé → match = MapEntry('', '') pour éviter un crash.
+            ]
+              */
     try {
       for (ProductModel product in products) {
+        final Map<String, String> uploadImagesMap =
+            {}; // 'assets/products/product 12' : 'https:cloudinary'
         //convert assetpath to file
         File thumbnail = await AppHelperFunctions.assetToFile(
           product.thumbnail,
@@ -31,7 +45,9 @@ class ProductRepository extends GetxController {
           AppKeys.productsFolder,
         );
         if (response.statusCode == 200) {
-          product.thumbnail = response.data['url'];
+          String url = response.data['url'];
+          uploadImagesMap[product.thumbnail] = url;
+          product.thumbnail = url;
         }
         //upload product images
         if (product.images != null && product.images!.isNotEmpty) {
@@ -51,11 +67,17 @@ class ProductRepository extends GetxController {
           //upadte product variation imgaes
           if (product.productVariations != null &&
               product.productVariations!.isNotEmpty) {
+            for (int i = 0; i < product.images!.length; i++) {
+              uploadImagesMap[product.images![i]] = imagesUrl[i];
+            }
             for (final variation in product.productVariations!) {
-              int index = product.images!.indexWhere(
-                (image) => image == variation.image,
+              final match = uploadImagesMap.entries.firstWhere(
+                (entry) => entry.key == variation.image,
+                orElse: () => const MapEntry('', ''),
               );
-              variation.image = imagesUrl[index];
+              if (match.key.isNotEmpty) {
+                variation.image = match.value;
+              }
             }
           }
 
@@ -115,4 +137,59 @@ class ProductRepository extends GetxController {
       throw 'Something went wrong. Please try again';
     }
   }
+
+  //! function to fecth list of products from firebase
+  Future<List<ProductModel>> fetchAllFeatureProducts() async {
+    try {
+      QuerySnapshot<Map<String, dynamic>> query = await _db
+          .collection(AppKeys.productsCollection)
+          .where('isFeatured', isEqualTo: true)
+          .get();
+      if (query.docs.isNotEmpty) {
+        List<ProductModel> products = query.docs
+            .map((document) => ProductModel.fromSnapshot(document))
+            .toList();
+        return products;
+      }
+      return [];
+    } on FirebaseException catch (e) {
+      //more general error like probleme with firebase project not only auth
+      throw AppFirebaseException(e.code).message;
+    } on FormatException catch (e) {
+      //format exception like invalide email
+      throw AppFormatException();
+    } on AppPlatformException catch (e) {
+      //exception related to device like connection probleme ..
+      throw AppPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong. Please try again';
+    }
+  }
+  //! function to fecth list of products from firebase
+  Future<List<ProductModel>> fecthProductByQuery(Query query) async {
+    try {
+      final querySnapshot = await query.get();
+          
+      if (querySnapshot.docs.isNotEmpty) {
+        List<ProductModel> products = querySnapshot.docs
+            .map((document) => ProductModel.fromQuerySnapshot(document))
+            .toList();
+        return products;
+      }
+      return [];
+    } on FirebaseException catch (e) {
+      //more general error like probleme with firebase project not only auth
+      throw AppFirebaseException(e.code).message;
+    } on FormatException catch (e) {
+      //format exception like invalide email
+      throw AppFormatException();
+    } on AppPlatformException catch (e) {
+      //exception related to device like connection probleme ..
+      throw AppPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong. Please try again';
+    }
+  }
+
+  
 }

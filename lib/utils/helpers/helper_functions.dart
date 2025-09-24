@@ -41,6 +41,8 @@ class AppHelperFunctions {
       return Colors.teal;
     } else if (value == 'Indigo') {
       return Colors.indigo;
+    } else if (value == "Silver") {
+      return Colors.grey;
     } else {
       return null;
     }
@@ -64,10 +66,15 @@ class AppHelperFunctions {
     //load asset bytes
     final byteData = await rootBundle.load(assetPath);
     //get temp directory
-    final tempDir = await getTemporaryDirectory();//return a temp dir for this app (eg /data/user/0/com.example.app/cache)
-    final file = File('${tempDir.path}/${assetPath.split('/').last}');///data/user/0/com.example.app/cache/logo.png
+    final tempDir =
+        await getTemporaryDirectory(); //return a temp dir for this app (eg /data/user/0/com.example.app/cache)
+    final file = File('${tempDir.path}/${assetPath.split('/').last}');
+
+    ///data/user/0/com.example.app/cache/logo.png
     //write bytes to temp file
-    await file.writeAsBytes(byteData.buffer.asUint8List());//write the byte to the file logo.png
+    await file.writeAsBytes(
+      byteData.buffer.asUint8List(),
+    ); //write the byte to the file logo.png
     return file;
   }
 }

@@ -27,7 +27,8 @@ class AppProductCardVertical extends StatelessWidget {
       productModel.salePrice,
     );
     return GestureDetector(
-      onTap: () => Get.to(() => ProductDetailsScreen()),
+      onTap: () =>
+          Get.to(() => ProductDetailsScreen(productModel: productModel)),
       child: Container(
         width: 180,
         // padding: const EdgeInsets.all(1),

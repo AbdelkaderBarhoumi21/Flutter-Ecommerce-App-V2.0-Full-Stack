@@ -27,7 +27,7 @@ class BrandProductsScreen extends StatelessWidget {
               AppBrandCard(brandModel: BrandModel.empty(),),
               SizedBox(height: AppSizes.spaceBtwSections),
               //brand products
-              AppSortableProducts(),
+              AppSortableProducts(productModel: [],),
             ],
           ),
         ),

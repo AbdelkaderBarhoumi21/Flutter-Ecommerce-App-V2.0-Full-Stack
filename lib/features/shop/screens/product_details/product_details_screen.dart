@@ -1,3 +1,5 @@
+import 'package:ecommerce_application_fullsatck_v2/features/shop/models/product_model.dart';
+import 'package:ecommerce_application_fullsatck_v2/utils/constants/enums.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_application_fullsatck_v2/common/styles/padding.dart';
 import 'package:ecommerce_application_fullsatck_v2/common/widget/button/elevated_button.dart';
@@ -11,7 +13,8 @@ import 'package:ecommerce_application_fullsatck_v2/utils/constants/sizes.dart';
 import 'package:readmore/readmore.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
-  const ProductDetailsScreen({super.key});
+  const ProductDetailsScreen({super.key, required this.productModel});
+  final ProductModel productModel;
 
   @override
   Widget build(BuildContext context) {
@@ -21,19 +24,22 @@ class ProductDetailsScreen extends StatelessWidget {
         child: Column(
           children: [
             //product image with slider
-            AppProductThumbnailAndSlider(),
+            AppProductThumbnailAndSlider(productModel: productModel),
             //product details
             Padding(
               padding: AppPadding.screenPadding,
               child: Column(
                 children: [
                   //price title stock and brand
-                  AppProductMetaData(),
+                  AppProductMetaData(productModel: productModel),
                   SizedBox(height: AppSizes.spaceBtwSections),
                   //price title stock brand
                   //attributes
-                  AppProductAttributes(),
-                  SizedBox(height: AppSizes.spaceBtwSections),
+                  if (productModel.productType ==
+                      ProductType.variable.toString()) ...[
+                    AppProductAttributes(productModel: productModel),
+                    SizedBox(height: AppSizes.spaceBtwSections),
+                  ],
 
                   //checkout button
                   AppElevatedButton(onPressed: () {}, child: Text("Checkout")),
@@ -46,8 +52,7 @@ class ProductDetailsScreen extends StatelessWidget {
                   ),
                   SizedBox(height: AppSizes.spaceBtwItems),
                   ReadMoreText(
-                    'This a product of iphone 11 with 512 GB ,This a product of iphone 11 with 512 GB,This a product of iphone 11 with 512 GB,This a product of iphone 11 with 512 GB',
-                    trimLines: 2,
+                    productModel.description ?? '',
                     trimMode: TrimMode.Line,
                     trimCollapsedText: ' Show more',
                     trimExpandedText: ' Less',
