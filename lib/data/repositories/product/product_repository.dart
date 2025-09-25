@@ -165,11 +165,12 @@ class ProductRepository extends GetxController {
       throw 'Something went wrong. Please try again';
     }
   }
+
   //! function to fecth list of products from firebase
   Future<List<ProductModel>> fecthProductByQuery(Query query) async {
     try {
       final querySnapshot = await query.get();
-          
+
       if (querySnapshot.docs.isNotEmpty) {
         List<ProductModel> products = querySnapshot.docs
             .map((document) => ProductModel.fromQuerySnapshot(document))
@@ -191,5 +192,40 @@ class ProductRepository extends GetxController {
     }
   }
 
-  
+  //fetch product by brand
+  Future<List<ProductModel>> getProductsForBrand({
+    required String brandId,
+    int limit = -1,
+  }) async {
+    try {
+      QuerySnapshot<Map<String, dynamic>> query = limit == -1
+          ? await _db
+                .collection(AppKeys.productsCollection)
+                .where('brand.id', isEqualTo: brandId)
+                .get()
+          : await _db
+                .collection(AppKeys.productsCollection)
+                .where('brand.id', isEqualTo: brandId)
+                .limit(limit)
+                .get();
+      if (query.docs.isNotEmpty) {
+        List<ProductModel> products = query.docs
+            .map((document) => ProductModel.fromSnapshot(document))
+            .toList();
+        return products;
+      }
+      return [];
+    } on FirebaseException catch (e) {
+      //more general error like probleme with firebase project not only auth
+      throw AppFirebaseException(e.code).message;
+    } on FormatException catch (e) {
+      //format exception like invalide email
+      throw AppFormatException();
+    } on AppPlatformException catch (e) {
+      //exception related to device like connection probleme ..
+      throw AppPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong. Please try again';
+    }
+  }
 }

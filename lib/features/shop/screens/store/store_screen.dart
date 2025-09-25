@@ -2,6 +2,7 @@ import 'package:ecommerce_application_fullsatck_v2/common/widget/shimmer/brand_s
 import 'package:ecommerce_application_fullsatck_v2/features/shop/controllers/brand/brand_controller.dart';
 import 'package:ecommerce_application_fullsatck_v2/features/shop/controllers/category/category_controller.dart';
 import 'package:ecommerce_application_fullsatck_v2/features/shop/models/brand_model.dart';
+import 'package:ecommerce_application_fullsatck_v2/features/shop/screens/brands/brand_products_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_application_fullsatck_v2/common/widget/appbar/tabBar.dart';
 import 'package:ecommerce_application_fullsatck_v2/common/widget/brand/brand_card.dart';
@@ -52,7 +53,7 @@ class StoreScreen extends StatelessWidget {
                             SizedBox(
                               height: AppSizes.brandCardHeight,
                               child: Obx(() {
-                                //loading state 
+                                //loading state
                                 if (brandController.isBrandLoading.value) {
                                   return AppBrandsShimmer();
                                 }
@@ -60,7 +61,7 @@ class StoreScreen extends StatelessWidget {
                                 if (brandController.featureBrands.isEmpty) {
                                   return Text('Brands Not Found');
                                 }
-                                //data found state 
+                                //data found state
                                 return ListView.separated(
                                   separatorBuilder: (context, index) =>
                                       SizedBox(
@@ -75,7 +76,15 @@ class StoreScreen extends StatelessWidget {
                                         brandController.featureBrands[index];
                                     return SizedBox(
                                       width: AppSizes.brandCardWidth,
-                                      child: AppBrandCard(brandModel: brand),
+                                      child: AppBrandCard(
+                                        brandModel: brand,
+                                        onTap: () => Get.to(
+                                          () => BrandProductsScreen(
+                                            title: brand.name,
+                                            brandModel: brand,
+                                          ),
+                                        ),
+                                      ),
                                     );
                                   },
                                 );
